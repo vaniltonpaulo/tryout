@@ -429,10 +429,36 @@ def stutter(word):
 		return '{0}... {0}... {1}?'.format(word[:2], word)
 
 
-stutter("incredible") #➞ "in... in... incredible?"
+stutter("incredible") ## "in... in... incredible?"
 
-stutter("enthusiastic") #➞ "en... en... enthusiastic?"
+stutter("enthusiastic") ## "en... en... enthusiastic?"
 
-stutter("outstanding") #➞ "ou... ou... outstanding?"
+stutter("outstanding") ## "ou... ou... outstanding?"
 word ="incredible"
 print(word[:2]+"...."+" "+ word[:2]+"...."+" "+word+"?")
+
+
+
+
+
+import math
+def factorial(num):
+        result = math.factorial(num)
+        return result
+
+print(factorial(3)) # 6
+
+factorial(5) # 120
+
+factorial(13) # 6227020800
+
+def dis(price, discount):
+        res = 100 - discount
+        return round(price * (res/100),0)
+
+
+print(dis(1500, 50)) # 750
+
+dis(89, 20) # 71.2
+
+dis(100, 75) # 25
