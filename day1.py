@@ -356,3 +356,83 @@ def less_than_100(a, b):
                 return False
 
 print(less_than_100(77, 30))
+
+
+
+def frames(minutes, fps):
+        return minutes * fps * 60
+
+
+frames(1, 1) ## 60
+
+frames(10, 1) ## 600
+
+print(frames(10, 25)) ## 15000
+
+
+
+# get_sum_of_elements([2, 7, 4]) # 13
+
+# get_sum_of_elements([45, 3, 0]) # 48
+
+# get_sum_of_elements([-2, 84, 23]) # 105
+
+
+
+def get_last_item(lst):
+        return lst[-1]
+
+get_last_item([1, 2, 3]) # 3
+
+get_last_item(["cat", "dog", "duck"]) # "duck"
+
+get_last_item([True, False, True]) # True
+
+get_last_item([7, "String", False]) # False
+
+
+def color_invert(rgb):
+        return tuple(255 - value for value in rgb)
+
+
+print(color_invert((255, 255, 255))) # (0, 0, 0)
+# (255, 255, 255) is the color white.
+# The opposite is (0, 0, 0), which is black.
+
+color_invert((0, 0, 0)) # (255, 255, 255)
+
+color_invert((165, 170, 221)) # (90, 85, 34)
+
+
+def relation_to_luke(name):
+        family = { "Darth Vader" : "father",
+              "Leia":"sister",
+                  "Han":"brother in law",
+                  "R2D2":"droid"}
+        print("Luke, I am your" +" "+ family.get(name,"dont know"))  
+        
+
+ 
+
+
+relation_to_luke("Darth Vader") # "Luke, I am your father."
+
+relation_to_luke("Leia") # "Luke, I am your sister."
+
+relation_to_luke("Han") # "Luke, I am your brother in law."
+
+
+def stutter(word):
+        return word[:2]+"...."+" "+ word[:2]+"...."+" "+word+"?"
+
+def stutter(word):
+		return '{0}... {0}... {1}?'.format(word[:2], word)
+
+
+stutter("incredible") #➞ "in... in... incredible?"
+
+stutter("enthusiastic") #➞ "en... en... enthusiastic?"
+
+stutter("outstanding") #➞ "ou... ou... outstanding?"
+word ="incredible"
+print(word[:2]+"...."+" "+ word[:2]+"...."+" "+word+"?")
