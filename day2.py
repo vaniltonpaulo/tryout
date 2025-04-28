@@ -184,3 +184,78 @@ print(jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"])) # ["F7", "E7", "A7", "Ab7
 
 print(jazzify([])) # []
 
+
+def is_curzon(num):
+    first = (2** num) + 1
+    second = (2 * num) + 1
+    if (first % second) == 0:
+        return True
+    else:
+        return False
+
+print(is_curzon(5)) # True
+# 2 ** 5 + 1 = 33
+# 2 * 5 + 1 = 11
+# 33 is a multiple of 11
+
+print(is_curzon(10)) # False
+# 2 ** 10 + 1 = 1025
+# 2 * 10 + 1 = 21
+# 1025 is not a multiple of 21
+
+print(is_curzon(14)) # True
+# 2 ** 14 + 1 = 16385
+# 2 * 14 + 1 = 29
+# 16385 is a multiple of 29
+
+def series_resistance(lst):
+    value = round(sum(lst),1)
+    if value <= 1:
+        return str(value) + " ohm"
+    else:
+        return str(value) + " ohms"
+
+print(series_resistance([1, 5, 6, 3])) # "15 ohms"
+
+series_resistance([16, 3.5, 6]) # "25.5 ohms"
+
+series_resistance([0.5, 0.5]) # "1.0 ohm"
+
+
+def evenly_divisible(a, b, c):
+    result = []
+    for i in range(a,b+1):
+        if (i % c) == 0:
+            result.append(i)
+    return sum(result)
+        
+
+
+print(evenly_divisible(1, 10, 20)) # 0
+# No number between 1 and 10 can be evenly divided by 20.
+
+print(evenly_divisible(1, 10, 2)) # 30
+# 2 + 4 + 6 + 8 + 10 = 30
+
+print(evenly_divisible(1, 10, 3)) # 18
+# 3 + 6 + 9 = 18
+
+
+import datetime 
+def time_for_milk_and_cookies(date):
+    if date.day == 24 and date.month == 12:
+        return True
+    else:
+        return False
+
+
+
+print(time_for_milk_and_cookies(datetime.date(2013, 12, 24))) # True
+print(time_for_milk_and_cookies(datetime.date(2010, 11, 2)))
+print(time_for_milk_and_cookies(datetime.date(1980, 9, 24)))
+print(time_for_milk_and_cookies(datetime.date(2013, 1, 23))) # False
+
+# time_for_milk_and_cookies(datetime.date(3000, 12, 24)) # True
+
+x = datetime.date(2013, 12, 24)
+print(x.day)
