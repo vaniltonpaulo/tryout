@@ -462,3 +462,11 @@ print(dis(1500, 50)) # 750
 dis(89, 20) # 71.2
 
 dis(100, 75) # 25
+
+
+
+circle_or_square(16, 625) # True
+
+circle_or_square(5, 100) # False
+
+circle_or_square(8, 144) # True
