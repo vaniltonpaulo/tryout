@@ -100,4 +100,64 @@ print(damage(100, 1, "minute")) # 6000
 damage(2, 100, "hour") # 720000
 
 
+def sum_recursively(lst):
+   return sum(lst)
 
+print(sum_recursively([1, 2, 3, 4])) # 10
+
+sum_recursively([1, 2]) # 3
+
+sum_recursively([1]) # 1
+
+sum_recursively([]) # 0
+
+import re
+
+def count_vowels(txt):
+   x = re.findall("a|e|o|i|u", txt)
+   return len(x)
+
+print(count_vowels("Celebration")) # 5
+
+count_vowels("Palm") # 1
+
+count_vowels("Prediction") # 4
+
+
+
+
+# import math
+
+# def number_split(n):
+#     x = (n / 2)
+#     if x > 0:
+#         x = round(x,0)
+#         if x % 2 != 0:
+#             result = [x, x + 1]
+#             return result
+#         else:
+#             result = [x, x]
+#             return result
+#     else:
+#         if x % 2 != 0:
+#             x = math.floor(x)
+#             x = round(x,0)
+#             result = [x, x + 1]
+#             return result
+#         else:
+#             x = math.floor(x)
+#             x = round(x,0)
+#             result = [x, x]
+#             return result
+
+# Not my solution
+def number_split(n):
+	return [n//2, n - n//2]         
+
+print(number_split(4)) # [2, 2]
+
+print(number_split(10)) # [5, 5]
+
+print(number_split(11)) # [5, 6]
+
+print(number_split(-9)) # [-5, -4]
