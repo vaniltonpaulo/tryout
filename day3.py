@@ -161,3 +161,62 @@ print(number_split(10)) # [5, 5]
 print(number_split(11)) # [5, 6]
 
 print(number_split(-9)) # [-5, -4]
+
+
+def reverse(txt):
+   txt = txt.swapcase()
+   return txt[::-1]
+
+print(reverse("Hello World")) # "DLROw OLLEh"
+
+reverse("ReVeRsE") # "eSrEvEr"
+
+reverse("Radar") # "RADAr"
+
+def even_or_odd(lst):
+   if sum(lst) % 2 ==0:
+      return "even"
+   else:
+      return "odd"
+
+
+even_or_odd([0]) # "even"
+
+even_or_odd([1]) # "odd"
+
+even_or_odd([]) # "even"
+
+even_or_odd([0, 1, 5]) # "even"
+
+def check(lst, el):
+   if el in lst:
+      return True
+   else:
+      return False
+
+
+check([1, 2, 3, 4, 5], 3) # True
+
+check([1, 1, 2, 1, 1], 3) # False
+
+check([5, 5, 5, 6], 5) # True
+
+check([], 5) # False
+
+
+
+def check_equals(lst1, lst2):
+	if lst1[::] == lst2[::]:
+		print(True)
+	else:
+		print(False)
+
+check_equals([1, 2], [1, 3]) # False
+
+check_equals([1, 2], [1, 2]) # True
+
+check_equals([4, 5, 6], [4, 5, 6]) # True
+
+check_equals([4, 7, 6], [4, 5, 6]) # False
+
+check_equals([1, 12], [11, 2]) # False
