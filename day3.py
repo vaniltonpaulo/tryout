@@ -220,3 +220,75 @@ check_equals([4, 5, 6], [4, 5, 6]) # True
 check_equals([4, 7, 6], [4, 5, 6]) # False
 
 check_equals([1, 12], [11, 2]) # False
+
+
+def sum_lst(lst):
+    total = [0]
+    for i in range(0, len(lst)):
+       total.append(lst[i])
+    return sum(total)
+
+print(sum_lst([1, 2, 3, 4, 5])) # 15
+
+sum_lst([-1, 0, 1]) # 0
+
+sum_lst([0, 4, 8, 12]) # 24
+
+
+def half_quarter_eighth(n):
+    return [n * 0.5,n * 0.25, n* 0.125]
+
+half_quarter_eighth(6) # [3, 1.5, 0.75]
+
+half_quarter_eighth(22) # [11, 5.5, 2.75]
+
+half_quarter_eighth(25) # [12.5, 6.25, 3.125]
+
+
+def last_ind(lst):
+    if not lst:
+        return None
+    else:
+        return lst[-1]
+
+
+print(last_ind([0, 4, 19, 34, 50, -9, 2])) # 2
+
+print(last_ind("The quick brown fox jumped over the lazy dog")) # "g"
+
+print(last_ind([])) # None
+
+def min_max(nums):
+    return [min(nums), max(nums)]
+
+
+print(min_max([1, 2, 3, 4, 5])) # [1, 5]
+
+min_max([2334454, 5]) # [5, 2334454]
+
+min_max([1]) # [1, 1]
+
+def birthday_cake_candles(candles):
+    x = str(max(candles))
+    result = str(candles).count(x)
+    return int(result)
+
+
+
+print(birthday_cake_candles([4, 4, 1, 3])) # 2
+# The maximum height candles are four units high.
+# There are two of them, so you return 2.
+
+birthday_cake_candles([3, 2, 1, 3]) # 2
+
+birthday_cake_candles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25]) # 4
+
+def get_vote_count(votes):
+    return votes.get("upvotes") - votes.get("downvotes")
+
+
+print(get_vote_count({ "upvotes": 13, "downvotes": 0 })) # 13
+
+print(get_vote_count({ "upvotes": 2, "downvotes": 33 })) # -31
+
+get_vote_count({ "upvotes": 132, "downvotes": 132 }) # 0
