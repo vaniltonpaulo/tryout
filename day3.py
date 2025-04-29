@@ -292,3 +292,26 @@ print(get_vote_count({ "upvotes": 13, "downvotes": 0 })) # 13
 print(get_vote_count({ "upvotes": 2, "downvotes": 33 })) # -31
 
 get_vote_count({ "upvotes": 132, "downvotes": 132 }) # 0
+
+
+
+def get_fillings(sandwich):
+    return sandwich[1:len(sandwich)-1]
+
+
+
+print(get_fillings(["bread", "ham", "cheese", "ham", "bread"])) # ["ham", "cheese", "ham"]
+
+get_fillings(["bread", "sausage", "tomato", "bread"]) # ["sausage", "tomato"]
+
+get_fillings(["bread", "lettuce", "bacon", "tomato", "bread"]) # ["lettuce", "bacon", "tomato"]
+
+
+def all_truthy(*args):
+    return all(args)
+
+print(all_truthy(True, True, True)) # True
+
+all_truthy(True, False, True) # False
+
+all_truthy(5, 4, 3, 2, 1, 0) # False
