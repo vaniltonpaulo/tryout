@@ -189,3 +189,57 @@ print(len("dbi"))
 
 def is_even(n):
 	return n % 2 == 0
+
+
+def odd_or_even(word):
+        return len(word) % 2 ==0
+
+
+print(odd_or_even("apples")) # True
+# The word "apples" has 6 characters.
+# 6 is an even number, so the program outputs True.
+
+print(odd_or_even("pears")) # False
+# "pears" has 5 letters, and 5 is odd.
+# Therefore the program outputs False.
+
+odd_or_even("cherry") # True
+
+def flip_bool(b):
+        if b  == True:
+                return 0
+        elif b  == False:
+                return 1
+        elif b  == 1:
+                return 0
+        else:
+                return 1
+
+
+print(flip_bool(True)) # 0
+
+flip_bool(False) # 1
+
+flip_bool(1) # 0
+
+flip_bool(0) # 1
+
+
+def int_within_bounds(n, lower, upper):
+        if n  >= lower and n < upper and type(n) == int:
+                return True
+        else:
+                return False
+        
+                
+
+
+print(int_within_bounds(3, 1, 9)) # True
+
+print(int_within_bounds(6, 1, 6)) # False
+
+print(int_within_bounds(4.5, 3, 8)) # False
+
+print(int_within_bounds(0, 0, 1))
+
+print(int_within_bounds(7, 7, 12))
