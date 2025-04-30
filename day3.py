@@ -406,3 +406,33 @@ print(square_digits(9119)) # 811181
 square_digits(2483) # 416649
 
 square_digits(3212) # 9414
+
+def cars_needed(n):
+    if n  == 0:
+        return 0
+    elif n % 5 == 0:
+        return n/ 5
+    else:
+        return (n // 5) + 1
+
+print(cars_needed(5)) # 1
+
+print(cars_needed(11)) # 3
+
+print(cars_needed(0)) # 0
+
+
+def unique(lst):
+    return min(lst, key= lst.count)
+
+def unique(lst):
+	for num in lst:
+		if lst.count(num) == 1:
+			return num
+
+
+print(unique([3, 3, 3, 7, 3, 3])) # 7
+
+unique([0, 0, 0.77, 0, 0]) # 0.77
+
+unique([0, 1, 1, 1, 1, 1, 1, 1]) # 0
