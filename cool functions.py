@@ -199,3 +199,43 @@ txt = ",,,,,rrttgg.....banana....rrr"
 x = txt.strip(",.grt")
 
 print(x)
+
+
+
+animals = ['cat', 'dog', 'rabbit', 'horse']
+
+# get the index of 'dog'
+index = animals.index('dog')
+
+print(index)
+
+# Output: 1
+
+
+
+
+def word(s):
+    d = {
+        "one"	:1,
+        "two"	:2,
+        "three"	:3,
+        "four"	:4,
+        "five"	:5,
+        "six"	:6,
+        "seven"	:7,
+        "eight"	:8,
+        "nine"	:9,
+        "zero"	:0
+        }
+    return d.get(s)
+
+
+print(word("one")) # 1
+
+word("two") # 2
+
+word("nine") # 9
+    
+#hi mate
+
+x= 1223
