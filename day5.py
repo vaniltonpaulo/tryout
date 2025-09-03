@@ -1,3 +1,4 @@
+
 def addition(*args, verbose=False):
     """
     Adds any number of numeric values together.
@@ -22,3 +23,7 @@ def addition(*args, verbose=False):
         print(f"{operation} = {result}")
 
     return result
+
+def addition(a, b):
+ a + b
+
